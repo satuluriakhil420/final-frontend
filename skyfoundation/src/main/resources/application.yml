@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: skyfoundation
+
+# SMTP Server Configuration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: aakhilwork@gmail.com
+    password: bqty ujfa xbyc tvzn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: akhil
+    password: Test@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+rzp:
+  key_id: rzp_test_U73wj3JOWZd5Y5
+  key_secret: pGH4WbitYFgmZgVX0LNnfu4Q
+  currency: INR
+  company_name: Roshini
+
+server:
+  port: 8099
+
+sonar:
+  projectKey: skyfoundation
+  projectName: skyfoundation
+  projectVersion: 1.0
+  sources: src
+  language: java
+  binaries: build/classes
+  tests: junit
+  dynamicAnalysis: reuseReports
+  junit:
+    reportsPath: build/test-reports
+  java:
+    coveragePlugin: jacoco
+    jacoco:
+      reportPath: build/test-reports/jacoco.exec
